@@ -1,9 +1,9 @@
 ﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using Praetoria_demo.Models.LoanApplications;
-using Praetoria_demo.Services.Interfaces;
+using praetura_demo.Models.LoanApplications;
+using praetura_demo.Services.Interfaces;
 
-namespace Praetoria_demo.Controllers.Loan
+namespace praetura_demo.Controllers.Loan
 {
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/[controller]")]

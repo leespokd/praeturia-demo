@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Praetoria_demo.Entities;
-using Praetoria_demo.Models.DecisionLogEntries;
+using praetura_demo.Entities;
+using praetura_demo.Models.DecisionLogEntries;
 
-namespace Praetoria_demo.Profiles
+namespace praetura_demo.Profiles
 {
     public class DecisionLogEntryProfile : Profile
     {

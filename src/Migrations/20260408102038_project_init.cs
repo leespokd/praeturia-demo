@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Praetoria_demo.Migrations
+namespace praetura_demo.Migrations
 {
     /// <inheritdoc />
     public partial class project_init : Migration

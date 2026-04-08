@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Praetoria_demo.Entities;
+using praetura_demo.Entities;
 
-namespace Praetoria_demo.Data
+namespace praetura_demo.Data
 {
     public class ApplicationDbContext : DbContext
     {

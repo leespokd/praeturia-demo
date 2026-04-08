@@ -1,6 +1,6 @@
-﻿using Praetoria_demo.Entities;
+﻿using praetura_demo.Entities;
 
-namespace Praetoria_demo.Repositories.Interfaces
+namespace praetura_demo.Repositories.Interfaces
 {
     public interface ILoanApplicationsRepository
     {

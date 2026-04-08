@@ -1,4 +1,4 @@
-﻿namespace Praetoria_demo.Services.Interfaces
+﻿namespace praetura_demo.Services.Interfaces
 {
     public interface ILoanEligibilityService
     {

@@ -1,4 +1,4 @@
-﻿namespace Praetoria_demo.Policies
+﻿namespace praetura_demo.Policies
 {
     //note these would be better saved as database entries, but for the sake of this demo, we'll hardcode them here
     //additionally, min monthly income should adjust based on currency

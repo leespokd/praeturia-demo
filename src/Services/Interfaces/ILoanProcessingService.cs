@@ -1,6 +1,6 @@
-﻿using Praetoria_demo.Entities;
+﻿using praetura_demo.Entities;
 
-namespace Praetoria_demo.Services.Interfaces
+namespace praetura_demo.Services.Interfaces
 {
     public interface ILoanProcessingService
     {

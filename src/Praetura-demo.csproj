@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Praetoria_demo</RootNamespace>
+    <RootNamespace>Praetura_demo</RootNamespace>
     <UserSecretsId>48e35668-2eba-40bd-a04b-8d291d3b07ef</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>

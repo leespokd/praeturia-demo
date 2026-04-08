@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Praetoria_demo.Tests</RootNamespace>
+    <RootNamespace>Praetura_demo.Tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Praetoria-demo\Praetoria-demo.csproj" />
+    <ProjectReference Include="..\Praetura-demo\Praetura-demo.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
-﻿using Praetoria_demo.Models.LoanApplications;
+﻿using praetura_demo.Models.LoanApplications;
 
-namespace Praetoria_demo.Services.Interfaces
+namespace praetura_demo.Services.Interfaces
 {
     public interface ILoanApplicationsService
     {

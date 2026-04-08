@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Praetoria_demo.Entities;
-using Praetoria_demo.Models.LoanApplications;
+using praetura_demo.Entities;
+using praetura_demo.Models.LoanApplications;
 
-namespace Praetoria_demo.Profiles
+namespace praetura_demo.Profiles
 {
     public class LoanApplicationProfile : Profile
     {

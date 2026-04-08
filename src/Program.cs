@@ -2,12 +2,12 @@ using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using Praetoria_demo.Data;
-using Praetoria_demo.Profiles;
-using Praetoria_demo.Repositories;
-using Praetoria_demo.Repositories.Interfaces;
-using Praetoria_demo.Services;
-using Praetoria_demo.Services.Interfaces;
+using praetura_demo.Data;
+using praetura_demo.Profiles;
+using praetura_demo.Repositories;
+using praetura_demo.Repositories.Interfaces;
+using praetura_demo.Services;
+using praetura_demo.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

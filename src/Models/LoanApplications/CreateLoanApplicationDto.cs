@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Praetoria_demo.Models.LoanApplications
+namespace praetura_demo.Models.LoanApplications
 {
     public class CreateLoanApplicationDto
     {

@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Text.Json;
 
-namespace Praetoria_demo.Middlewares
+namespace praetura_demo.Middlewares
 {
     public class ErrorHandlingMiddleware
     {

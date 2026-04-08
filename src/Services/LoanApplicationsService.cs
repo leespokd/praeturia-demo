@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using Praetoria_demo.Entities;
-using Praetoria_demo.Models.LoanApplications;
-using Praetoria_demo.Repositories.Interfaces;
-using Praetoria_demo.Services.Interfaces;
+using praetura_demo.Entities;
+using praetura_demo.Models.LoanApplications;
+using praetura_demo.Repositories.Interfaces;
+using praetura_demo.Services.Interfaces;
 
-namespace Praetoria_demo.Services
+namespace praetura_demo.Services
 {
     public class LoanApplicationsService : ILoanApplicationsService
     {

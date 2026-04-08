@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Praetoria_demo.Models.DecisionLogEntries
+namespace praetura_demo.Models.DecisionLogEntries
 {
     public class DecisionLogEntryDto
     {

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praetoria-demo", "src\Praetoria-demo.csproj", "{C2A97C74-3B6A-45BE-A5BF-DE1A84047E74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praetura-demo", "src\Praetura-demo.csproj", "{C2A97C74-3B6A-45BE-A5BF-DE1A84047E74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praetoria-demo.Tests", "..\Praetoria-demo.Tests\Praetoria-demo.Tests.csproj", "{EBBF45F3-C722-41F5-B421-58AAC079EF5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praetura-demo.Tests", "..\Praetura-demo.Tests\Praetura-demo.Tests.csproj", "{EBBF45F3-C722-41F5-B421-58AAC079EF5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
