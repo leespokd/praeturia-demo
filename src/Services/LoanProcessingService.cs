@@ -1,6 +1,7 @@
 ﻿using praetura_demo.Entities;
 using praetura_demo.Policies;
 using praetura_demo.Services.Interfaces;
+using Praetura_demo.Wrappers;
 
 namespace praetura_demo.Services
 {
@@ -13,25 +14,33 @@ namespace praetura_demo.Services
             _eligibilityService = eligibilityService;
         }
 
-        public List<DecisionLogEntry> ProcessLoan(LoanApplication loan)
+        public Result<List<DecisionLogEntry>> ProcessLoan(LoanApplication loan)
         {
-            var incomePassed = _eligibilityService.IsMonthlyIncomeGreaterThanMinAllowed(loan.MonthlyIncome);
-            var amountPassed = _eligibilityService.IsRequestedAmountWithinAllowedLimit(loan.MonthlyIncome, loan.RequestedAmount);
-            var termPassed = _eligibilityService.IsTermInMonthsWithinRange(loan.TermMonths);
-
-            var logs = new List<DecisionLogEntry>
+            try
             {
-                CreateDecisionLogEntry(loan, incomePassed, "Monthly Income"),
-                CreateDecisionLogEntry(loan, amountPassed, "Requested Amount"),
-                CreateDecisionLogEntry(loan, termPassed, "Term")
-            };
+                var incomePassed = _eligibilityService.IsMonthlyIncomeGreaterThanMinAllowed(loan.MonthlyIncome);
+                var amountPassed = _eligibilityService.IsRequestedAmountWithinAllowedLimit(loan.MonthlyIncome, loan.RequestedAmount);
+                var termPassed = _eligibilityService.IsTermInMonthsWithinRange(loan.TermMonths);
 
-            var approved = incomePassed && amountPassed && termPassed;
+                var logs = new List<DecisionLogEntry>
+                {
+                    CreateDecisionLogEntry(loan, incomePassed, "Monthly Income"),
+                    CreateDecisionLogEntry(loan, amountPassed, "Requested Amount"),
+                    CreateDecisionLogEntry(loan, termPassed, "Term")
+                };
 
-            loan.Status = approved ? "Approved" : "Rejected";
-            loan.ReviewedAt = DateTime.UtcNow;
+                var approved = incomePassed && amountPassed && termPassed;
 
-            return logs;
+                loan.Status = approved ? "Approved" : "Rejected";
+                loan.ReviewedAt = DateTime.UtcNow;
+
+                return Result<List<DecisionLogEntry>>.Success(logs);
+            }
+            catch (Exception)
+            {
+
+                return Result<List<DecisionLogEntry>>.Failure(ErrorCode.Unexpected, "An error occurred while processing the loan application");
+            }            
         }
 
         private static DecisionLogEntry CreateDecisionLogEntry(LoanApplication loan, bool passed, string name)

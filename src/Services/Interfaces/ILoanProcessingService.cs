@@ -1,9 +1,10 @@
 ﻿using praetura_demo.Entities;
+using Praetura_demo.Wrappers;
 
 namespace praetura_demo.Services.Interfaces
 {
     public interface ILoanProcessingService
     {
-        List<DecisionLogEntry> ProcessLoan(LoanApplication loan);
+        Result<List<DecisionLogEntry>> ProcessLoan(LoanApplication loan);
     }
 }

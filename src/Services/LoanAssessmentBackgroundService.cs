@@ -43,17 +43,24 @@ namespace praetura_demo.Services
 
                     foreach (var loan in pendingLoans)
                     {
-                        var logs = processor.ProcessLoan(loan);
-                        db.DecisionLogEntries.AddRange(logs);
+                        var logsResult = processor.ProcessLoan(loan);
+                        if (logsResult.IsFailure || logsResult.Value == null)
+                        {
+                            loan.Status = "Pending";//revert back to pending, would likely have a Failed status, but not in spec
+                            _logger.LogError("Error processing loan application {LoanId}: {ErrorMessage}", loan.Id, logsResult.ErrorMessage);
+                            continue;
+                        }
+                        db.DecisionLogEntries.AddRange(logsResult.Value);
                     }
 
+                    //to prevent against batch failure, could save each loan independently, but this is inefficient
                     if (pendingLoans.Count > 0)
                     {
                         await db.SaveChangesAsync(stoppingToken);
-                        _logger.LogInformation("Processed {Count} loan applications processed", pendingLoans.Count);
-                        _logger.LogInformation("Processed {Count} loan applications approved", pendingLoans.Count(c => c.Status == "Approved"));
-                        _logger.LogInformation("Processed {Count} loan applications declined", pendingLoans.Count(c => c.Status == "Declined"));
-                        _logger.LogInformation("Processed {Count} loan applications were not processed", pendingLoans.Count(c => c.Status == "Pending"));
+                        _logger.LogInformation("Processed {Count} loan applications", pendingLoans.Count);
+                        _logger.LogInformation("{Count} loan applications approved", pendingLoans.Count(c => c.Status == "Approved"));
+                        _logger.LogInformation("{Count} loan applications rejected", pendingLoans.Count(c => c.Status == "Rejected"));
+                        _logger.LogInformation("{Count} loan applications were not processed", pendingLoans.Count(c => c.Status == "Pending"));
                     }
                 }
                 catch (Exception ex)
