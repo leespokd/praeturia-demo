@@ -41,6 +41,7 @@ https://localhost:{port}
 
 ```bash
 ## Running the Application
+```
 
 ### 1. Restore dependencies
 
