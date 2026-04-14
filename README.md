@@ -43,6 +43,7 @@ https://localhost:{port}
 dotnet restore
 dotnet build
 dotnet run --project src/Praetura-demo.csproj
+```
 
 ## API Endpoints
 
@@ -57,21 +58,26 @@ dotnet run --project src/Praetura-demo.csproj
   "requestedAmount": 8000,
   "termMonths": 36
 }
+```
 
+```json
 {
   "id": "guid",
   "status": "Pending",
   "createdAt": "timestamp"
 }
+```
 
 ### GET /loan-applications/{id}
 
+```json
 {
   "id": "guid",
   "name": "...",
   "status": "Approved",
   "decisionLogs": [...]
 }
+```
 
 ### Eligibility Rules
 
