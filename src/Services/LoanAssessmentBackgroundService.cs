@@ -32,7 +32,7 @@ namespace praetura_demo.Services
 
                     //would ideally use a more efficient approach here, but for simplicity we will just load 20 pending loans into memory
                     //in a real application we would want to use a more efficient approach, such as processing loans in batches or using a queue-based system
-                    //would likely implement a step here if multiple workers to change the status of the loans to "Processing" to avoid multiple workers processing the same loans,
+                    //would likely implement a step here if multiple workers to change the status of the loans to "Processing" in atomic update/get query to avoid multiple workers processing the same loans,
                     //but for simplicity we will assume only one worker is running
 
                     var pendingLoans = await db.LoanApplications
