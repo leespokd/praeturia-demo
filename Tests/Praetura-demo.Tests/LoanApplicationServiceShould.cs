@@ -3,14 +3,14 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using MockQueryable;
 using Moq;
-using praetura_demo.Entities;
-using praetura_demo.Models.LoanApplications;
-using praetura_demo.Profiles;
-using praetura_demo.Repositories.Interfaces;
-using praetura_demo.Services;
-using praetura_demo.Services.Interfaces;
+using Praetura_demo.Entities;
+using Praetura_demo.Models.LoanApplications;
+using Praetura_demo.Profiles;
+using Praetura_demo.Repositories.Interfaces;
+using Praetura_demo.Services;
+using Praetura_demo.Services.Interfaces;
 
-namespace praetura_demo.Tests
+namespace Praetura_demo.Tests
 {
     public class LoanApplicationServiceShould
     {

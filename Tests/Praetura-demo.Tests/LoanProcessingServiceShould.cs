@@ -1,7 +1,7 @@
-﻿using praetura_demo.Entities;
-using praetura_demo.Services;
-using praetura_demo.Services.Interfaces;
-namespace praetura_demo.Tests
+﻿using Praetura_demo.Entities;
+using Praetura_demo.Services;
+using Praetura_demo.Services.Interfaces;
+namespace Praetura_demo.Tests
 {
     public class LoanProcessingServiceShould
     {

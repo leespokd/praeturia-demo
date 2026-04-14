@@ -82,7 +82,7 @@ dotnet run --project src/Praetura-demo.csproj
 ### Eligibility Rules
 
 Monthly income >= £2,000
-Requested amount <=> 4 × monthly income
+Requested amount <= 4 × monthly income
 Term between 12 and 60 months
 
 ### Background Processing

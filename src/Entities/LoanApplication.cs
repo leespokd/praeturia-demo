@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace praetura_demo.Entities
+namespace Praetura_demo.Entities
 {
     public class LoanApplication
     {

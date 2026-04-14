@@ -2,13 +2,13 @@ using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using praetura_demo.Data;
-using praetura_demo.Middlewares;
-using praetura_demo.Profiles;
-using praetura_demo.Repositories;
-using praetura_demo.Repositories.Interfaces;
-using praetura_demo.Services;
-using praetura_demo.Services.Interfaces;
+using Praetura_demo.Data;
+using Praetura_demo.Middlewares;
+using Praetura_demo.Profiles;
+using Praetura_demo.Repositories;
+using Praetura_demo.Repositories.Interfaces;
+using Praetura_demo.Services;
+using Praetura_demo.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,14 +27,15 @@ builder.Services.AddHostedService<LoanAssessmentBackgroundService>();
 
 builder.Services.AddAutoMapper(cfg => { }, typeof(LoanApplicationProfile));
 
-builder.Services
-    .AddApiVersioning(options =>
-    {
-        options.DefaultApiVersion = new ApiVersion(1);
-        options.AssumeDefaultVersionWhenUnspecified = true;
-        options.ReportApiVersions = true;
-    })
-    .AddMvc();
+//not asked for, but would add
+//builder.Services
+//    .AddApiVersioning(options =>
+//    {
+//        options.DefaultApiVersion = new ApiVersion(1);
+//        options.AssumeDefaultVersionWhenUnspecified = true;
+//        options.ReportApiVersions = true;
+//    })
+//    .AddMvc();
 
 builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(setup =>

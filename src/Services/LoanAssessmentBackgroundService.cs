@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using praetura_demo.Data;
-using praetura_demo.Services.Interfaces;
+using Praetura_demo.Data;
+using Praetura_demo.Services.Interfaces;
 
-namespace praetura_demo.Services
+namespace Praetura_demo.Services
 {
     public sealed class LoanAssessmentBackgroundService : BackgroundService
     {

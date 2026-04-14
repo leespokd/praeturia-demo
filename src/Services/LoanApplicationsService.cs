@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using praetura_demo.Entities;
-using praetura_demo.Models.LoanApplications;
-using praetura_demo.Repositories.Interfaces;
-using praetura_demo.Services.Interfaces;
+using Praetura_demo.Entities;
+using Praetura_demo.Models.LoanApplications;
+using Praetura_demo.Repositories.Interfaces;
+using Praetura_demo.Services.Interfaces;
 
-namespace praetura_demo.Services
+namespace Praetura_demo.Services
 {
     public class LoanApplicationsService : ILoanApplicationsService
     {
@@ -29,7 +29,7 @@ namespace praetura_demo.Services
                 .GetAllAsNoTracking()
                 .Where(c => c.Id == id)
                 .Include(c => c.DecisionLogEntries)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(ct);
 
             if (loanApplication == null) return null;
 

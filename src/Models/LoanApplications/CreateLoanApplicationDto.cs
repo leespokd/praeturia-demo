@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace praetura_demo.Models.LoanApplications
+namespace Praetura_demo.Models.LoanApplications
 {
     public class CreateLoanApplicationDto
     {
@@ -12,11 +12,11 @@ namespace praetura_demo.Models.LoanApplications
         public string Email { get; set; } = string.Empty;
 
         [Required]
-        [Range(typeof(decimal), "0", "999999999999999999", ErrorMessage = "Requested amount must be zero or greater, and less than 999999999999999999")]//max values to be decided
+        [Range(typeof(decimal), "0.01", "999999999999999999", ErrorMessage = "Requested amount must be zero or greater, and less than 999999999999999999")]//max values to be decided
         public decimal MonthlyIncome { get; set; }
 
         [Required]
-        [Range(typeof(decimal), "0", "999999999999999999", ErrorMessage = "Requested amount must be zero or greater, and less than 999999999999999999")]//max values to be decided
+        [Range(typeof(decimal), "0.01", "999999999999999999", ErrorMessage = "Requested amount must be zero or greater, and less than 999999999999999999")]//max values to be decided
         public decimal RequestedAmount { get; set; }
 
         [Required]

@@ -3,11 +3,11 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using praetura_demo.Data;
+using Praetura_demo.Data;
 
 #nullable disable
 
-namespace praetura_demo.Migrations
+namespace Praetura_demo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace praetura_demo.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.25");
 
-            modelBuilder.Entity("praetura_demo.Entities.DecisionLogEntry", b =>
+            modelBuilder.Entity("Praetura_demo.Entities.DecisionLogEntry", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,7 @@ namespace praetura_demo.Migrations
                     b.ToTable("DecisionLogEntries");
                 });
 
-            modelBuilder.Entity("praetura_demo.Entities.LoanApplication", b =>
+            modelBuilder.Entity("Praetura_demo.Entities.LoanApplication", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -85,9 +85,9 @@ namespace praetura_demo.Migrations
                     b.ToTable("LoanApplications");
                 });
 
-            modelBuilder.Entity("praetura_demo.Entities.DecisionLogEntry", b =>
+            modelBuilder.Entity("Praetura_demo.Entities.DecisionLogEntry", b =>
                 {
-                    b.HasOne("praetura_demo.Entities.LoanApplication", "LoanApplication")
+                    b.HasOne("Praetura_demo.Entities.LoanApplication", "LoanApplication")
                         .WithMany("DecisionLogEntries")
                         .HasForeignKey("LoanApplicationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -96,7 +96,7 @@ namespace praetura_demo.Migrations
                     b.Navigation("LoanApplication");
                 });
 
-            modelBuilder.Entity("praetura_demo.Entities.LoanApplication", b =>
+            modelBuilder.Entity("Praetura_demo.Entities.LoanApplication", b =>
                 {
                     b.Navigation("DecisionLogEntries");
                 });

@@ -1,7 +1,7 @@
-﻿using praetura_demo.Entities;
-using praetura_demo.Models.DecisionLogEntries;
+﻿using Praetura_demo.Entities;
+using Praetura_demo.Models.DecisionLogEntries;
 
-namespace praetura_demo.Models.LoanApplications
+namespace Praetura_demo.Models.LoanApplications
 {
     public class LoanApplicationDto
     {

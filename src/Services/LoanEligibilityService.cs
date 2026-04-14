@@ -1,7 +1,7 @@
-﻿using praetura_demo.Policies;
-using praetura_demo.Services.Interfaces;
+﻿using Praetura_demo.Policies;
+using Praetura_demo.Services.Interfaces;
 
-namespace praetura_demo.Services
+namespace Praetura_demo.Services
 {
     public class LoanEligibilityService : ILoanEligibilityService
     {

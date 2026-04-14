@@ -1,7 +1,7 @@
-﻿using praetura_demo.Services;
-using praetura_demo.Services.Interfaces;
+﻿using Praetura_demo.Services;
+using Praetura_demo.Services.Interfaces;
 
-namespace praetura_demo.Tests
+namespace Praetura_demo.Tests
 {
     public class LoanEligibilityServiceShould
     {

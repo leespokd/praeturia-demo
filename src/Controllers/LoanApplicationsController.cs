@@ -1,7 +1,7 @@
 ﻿//using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using praetura_demo.Models.LoanApplications;
-using praetura_demo.Services.Interfaces;
+using Praetura_demo.Models.LoanApplications;
+using Praetura_demo.Services.Interfaces;
 
 namespace Praetura_demo.Controllers
 {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using praetura_demo.Data;
-using praetura_demo.Entities;
-using praetura_demo.Repositories.Interfaces;
+using Praetura_demo.Data;
+using Praetura_demo.Entities;
+using Praetura_demo.Repositories.Interfaces;
 
-namespace praetura_demo.Repositories
+namespace Praetura_demo.Repositories
 {
     public class DecisionLogEntryRepository : IDecisionLogEntryRepository
     {

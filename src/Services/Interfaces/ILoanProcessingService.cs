@@ -1,7 +1,7 @@
-﻿using praetura_demo.Entities;
+﻿using Praetura_demo.Entities;
 using Praetura_demo.Wrappers;
 
-namespace praetura_demo.Services.Interfaces
+namespace Praetura_demo.Services.Interfaces
 {
     public interface ILoanProcessingService
     {

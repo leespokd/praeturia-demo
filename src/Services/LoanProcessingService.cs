@@ -1,9 +1,9 @@
-﻿using praetura_demo.Entities;
-using praetura_demo.Policies;
-using praetura_demo.Services.Interfaces;
+﻿using Praetura_demo.Entities;
+using Praetura_demo.Policies;
+using Praetura_demo.Services.Interfaces;
 using Praetura_demo.Wrappers;
 
-namespace praetura_demo.Services
+namespace Praetura_demo.Services
 {
     public class LoanProcessingService : ILoanProcessingService
     {
