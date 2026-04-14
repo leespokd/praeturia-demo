@@ -1,3 +1,104 @@
+# Loan Origination Service (.NET 8)
+
+This project implements a simple loan origination service that accepts loan applications via a REST API and processes them asynchronously in the background based on eligibility rules.
+
+---
+
+## Tech Stack
+
+- .NET 8 / ASP.NET Core
+- Entity Framework Core (In-Memory / SQLite)
+- BackgroundService for async processing
+- xUnit for unit testing
+
+---
+
+## Features
+
+- Submit loan applications via REST API
+- Retrieve application status and decision logs
+- Background processing of applications
+- Eligibility rules evaluation
+- Decision logging for each rule
+- Basic logging and observability
+
+---
+
+## Running the Application
+
+### Option 1: Run via Visual Studio (IIS Express)
+
+1. Open `Praetura-demo.sln`
+2. Set `Praetura-demo` as the startup project
+3. Press `F5` or click **Run**
+
+API will be available at:
+https://localhost:{port}
+
+---
+
+### Option 2: Run via CLI
+
+```bash
+dotnet restore
+dotnet build
+dotnet run --project src/Praetura-demo.csproj
+
+## API Endpoints
+
+### POST /loan-applications
+
+#### Request
+```json
+{
+  "name": "Alice Example",
+  "email": "alice@example.com",
+  "monthlyIncome": 3500,
+  "requestedAmount": 8000,
+  "termMonths": 36
+}
+
+{
+  "id": "guid",
+  "status": "Pending",
+  "createdAt": "timestamp"
+}
+
+### GET /loan-applications/{id}
+
+{
+  "id": "guid",
+  "name": "...",
+  "status": "Approved",
+  "decisionLogs": [...]
+}
+
+### Eligibility Rules
+
+Monthly income >= £2,000
+Requested amount <=> 4 × monthly income
+Term between 12 and 60 months
+
+### Background Processing
+Runs every 60 seconds
+Processes pending applications
+Updates status to:
+Approved
+Rejected
+Adds ReviewedAt timestamp
+Logs decisions and errors
+
+### Architecture Overview
+Controllers - API layer
+Services - Business logic
+EF Core - Data access
+BackgroundService - Async processing
+
+### Trade-offs & Assumptions
+In-memory DB used
+Single worker assumed
+No idempotency
+Basic validation only
 If the system had to handle 5000000 applications per day, I would implement
 
 1. horizontal scaling, so the system can grow in line with demand
