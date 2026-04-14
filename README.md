@@ -39,10 +39,6 @@ https://localhost:{port}
 
 ### Option 2: Run via CLI
 
-```bash
-## Running the Application
-```
-
 ### 1. Restore dependencies
 
 ```bash
@@ -79,8 +75,6 @@ http://localhost:5265/swagger/index.html
 
 ```bash
 dotnet test
-```
-
 ```
 
 ## API Endpoints
