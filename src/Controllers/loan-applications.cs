@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using praetura_demo.Models.LoanApplications;
 using praetura_demo.Services.Interfaces;
 
-namespace praetura_demo.Controllers.Loan
+namespace Praetura_demo.Controllers
 {
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/[controller]")]

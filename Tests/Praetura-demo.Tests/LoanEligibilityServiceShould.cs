@@ -1,5 +1,5 @@
-﻿using Praetoria_demo.Services;
-using Praetoria_demo.Services.Interfaces;
+﻿using praetura_demo.Services;
+using praetura_demo.Services.Interfaces;
 
 namespace Praetoria_demo.Tests
 {

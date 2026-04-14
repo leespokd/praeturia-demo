@@ -1,14 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using Praetoria_demo.Repositories.Interfaces;
-using Praetoria_demo.Services.Interfaces;
-using Praetoria_demo.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Praetoria_demo.Entities;
-
+﻿using praetura_demo.Entities;
+using praetura_demo.Services;
+using praetura_demo.Services.Interfaces;
 namespace Praetoria_demo.Tests
 {
     public class LoanProcessingServiceShould
@@ -23,15 +15,15 @@ namespace Praetoria_demo.Tests
         }
 
         [Theory]
-        [InlineData(1999.99, 2000.00, 12, "Declined")]
+        [InlineData(1999.99, 2000.00, 12, "Rejected")]
         [InlineData(2000.00, 2000.00, 12, "Approved")]
         [InlineData(2000.01, 2000.00, 12, "Approved")]
-        [InlineData(2000.00, 8000.01, 12, "Declined")]
+        [InlineData(2000.00, 8000.01, 12, "Rejected")]
         [InlineData(2000.00, 8000.00, 12, "Approved")]
         [InlineData(2000.00, 7999.99, 12, "Approved")]
-        [InlineData(2000.00, 2000.00, 11, "Declined")]
+        [InlineData(2000.00, 2000.00, 11, "Rejected")]
         [InlineData(2000.00, 2000.00, 60, "Approved")]
-        [InlineData(2000.00, 2000.00, 61, "Declined")]
+        [InlineData(2000.00, 2000.00, 61, "Rejected")]
         public void ProcessLoan(decimal monthlyIncome, decimal requestedAmount, int termInMonths, string expectedStatus)
         {
             // Arrange

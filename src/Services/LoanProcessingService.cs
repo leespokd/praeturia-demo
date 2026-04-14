@@ -28,7 +28,7 @@ namespace praetura_demo.Services
 
             var approved = incomePassed && amountPassed && termPassed;
 
-            loan.Status = approved ? "Approved" : "Declined";
+            loan.Status = approved ? "Approved" : "Rejected";
             loan.ReviewedAt = DateTime.UtcNow;
 
             return logs;

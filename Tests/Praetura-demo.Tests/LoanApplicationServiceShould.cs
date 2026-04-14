@@ -3,12 +3,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using MockQueryable;
 using Moq;
-using Praetoria_demo.Entities;
-using Praetoria_demo.Models.LoanApplications;
-using Praetoria_demo.Profiles;
-using Praetoria_demo.Repositories.Interfaces;
-using Praetoria_demo.Services;
-using Praetoria_demo.Services.Interfaces;
+using praetura_demo.Entities;
+using praetura_demo.Models.LoanApplications;
+using praetura_demo.Profiles;
+using praetura_demo.Repositories.Interfaces;
+using praetura_demo.Services;
+using praetura_demo.Services.Interfaces;
 
 namespace Praetoria_demo.Tests
 {
