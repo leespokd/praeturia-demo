@@ -7,7 +7,7 @@ This project implements a simple loan origination service that accepts loan appl
 ## Tech Stack
 
 - .NET 8 / ASP.NET Core
-- Entity Framework Core (In-Memory / SQLite)
+- Entity Framework Core (SQLite)
 - BackgroundService for async processing
 - xUnit for unit testing
 
@@ -101,7 +101,7 @@ EF Core - Data access
 BackgroundService - Async processing
 
 ### Trade-offs & Assumptions
-In-memory DB used
+SQL lite used
 Single worker assumed
 No idempotency
 Basic validation only
