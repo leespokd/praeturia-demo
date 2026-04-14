@@ -40,9 +40,40 @@ https://localhost:{port}
 ### Option 2: Run via CLI
 
 ```bash
+## Running the Application
+
+### 1. Restore dependencies
+
+```bash
 dotnet restore
+```
+
+### 2. Build the solution
+
+```bash
 dotnet build
+```
+
+### 3. Apply database migrations (first run only)
+
+```bash
+dotnet ef database update --project src/Praetura-demo.csproj
+```
+
+### 4. Run the application
+
+```bash
 dotnet run --project src/Praetura-demo.csproj
+```
+
+---
+
+### Running tests
+
+```bash
+dotnet test
+```
+
 ```
 
 ## API Endpoints
