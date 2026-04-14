@@ -68,7 +68,7 @@ builder.Services.AddControllers()
             //this will help to identify which endpoint caused the error
             validationProblemDetails.Instance = context.HttpContext.Request.Path;
             //more specific than error 400
-            validationProblemDetails.Status = StatusCodes.Status422UnprocessableEntity;
+            validationProblemDetails.Status = StatusCodes.Status400BadRequest;
             validationProblemDetails.Title = "One or more validation errors occurred.";
             validationProblemDetails.Extensions["correlationId"] = correlationId;
             validationProblemDetails.Extensions["traceId"] = context.HttpContext.TraceIdentifier;

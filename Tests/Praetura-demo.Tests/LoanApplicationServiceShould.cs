@@ -10,7 +10,7 @@ using praetura_demo.Repositories.Interfaces;
 using praetura_demo.Services;
 using praetura_demo.Services.Interfaces;
 
-namespace Praetoria_demo.Tests
+namespace praetura_demo.Tests
 {
     public class LoanApplicationServiceShould
     {
@@ -73,7 +73,7 @@ namespace Praetoria_demo.Tests
                             Id = Guid.NewGuid(),
                             LoanApplicationId = loanApplicationId,
                             Passed = true,
-                            RuleName = "Term Months",
+                            RuleName = "Term",
                             EvaluatedAt = DateTime.UtcNow
                         }
                     }
@@ -107,7 +107,7 @@ namespace Praetoria_demo.Tests
             Assert.Contains(result.DecisionLogEntries, x =>
                 x.RuleName == "Requested Amount" && x.Passed);
             Assert.Contains(result.DecisionLogEntries, x =>
-                x.RuleName == "Term Months" && x.Passed);
+                x.RuleName == "Term" && x.Passed);
         }
 
         [Fact]

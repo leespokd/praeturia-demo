@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -9,6 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{432084FC-2F8B-43B1-83AB-952A502223A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praetura-demo.Tests", "..\Praetura-demo.Tests\Praetura-demo.Tests.csproj", "{FCDE59DA-DF50-939F-5B31-6C67415506C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,13 +27,18 @@ Global
 		{EBBF45F3-C722-41F5-B421-58AAC079EF5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBBF45F3-C722-41F5-B421-58AAC079EF5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBBF45F3-C722-41F5-B421-58AAC079EF5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCDE59DA-DF50-939F-5B31-6C67415506C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCDE59DA-DF50-939F-5B31-6C67415506C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCDE59DA-DF50-939F-5B31-6C67415506C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCDE59DA-DF50-939F-5B31-6C67415506C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C2A97C74-3B6A-45BE-A5BF-DE1A84047E74} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{EBBF45F3-C722-41F5-B421-58AAC079EF5B} = {432084FC-2F8B-43B1-83AB-952A502223A8}
+		{EBBF45F3-C722-41F5-B421-58AAC079EF5B} = {00000000-0000-0000-0000-000000000000}
+		{FCDE59DA-DF50-939F-5B31-6C67415506C3} = {432084FC-2F8B-43B1-83AB-952A502223A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14892CB3-3329-4A11-A1D9-248D20742730}

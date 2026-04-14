@@ -5,21 +5,23 @@ using praetura_demo.Services.Interfaces;
 
 namespace Praetura_demo.Controllers
 {
-    [ApiVersion("1")]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    //normally I would use API versioning and set route at controller level,
+    //but in order to adhere to the demo, I will leave it out for now. It can be added in the future if needed.
+    //[ApiVersion("1")]
+    //[Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class ApplicationsController : ControllerBase
+    public class LoanApplications : ControllerBase
     {
         private readonly ILoanApplicationsService _loanApplicationsService;
 
-        public ApplicationsController(ILoanApplicationsService loanApplicationsService)
+        public LoanApplications(ILoanApplicationsService loanApplicationsService)
         {
             _loanApplicationsService = loanApplicationsService;
         }
         
         //error handling in middleware
 
-        [HttpGet("{id}")]
+        [HttpGet("loan-applications/{id}")]
         public async Task<IActionResult> GetById(Guid id,
             CancellationToken ct)
         {
@@ -31,7 +33,7 @@ namespace Praetura_demo.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPost("loan-applications")]
         public async Task<IActionResult> Create([FromBody] CreateLoanApplicationDto createLoanApplicationDto,
             CancellationToken ct)
         {
