@@ -66,6 +66,12 @@ dotnet ef database update --project src/Praetura-demo.csproj
 dotnet run --project src/Praetura-demo.csproj
 ```
 
+### API will be available at:
+
+```
+http://localhost:5265/swagger/index.html
+```
+
 ---
 
 ### Running tests
