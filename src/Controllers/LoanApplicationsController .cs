@@ -1,4 +1,4 @@
-﻿using Asp.Versioning;
+﻿//using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using praetura_demo.Models.LoanApplications;
 using praetura_demo.Services.Interfaces;
@@ -10,11 +10,11 @@ namespace Praetura_demo.Controllers
     //[ApiVersion("1")]
     //[Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class LoanApplications : ControllerBase
+    public class LoanApplicationsController : ControllerBase
     {
         private readonly ILoanApplicationsService _loanApplicationsService;
 
-        public LoanApplications(ILoanApplicationsService loanApplicationsService)
+        public LoanApplicationsController(ILoanApplicationsService loanApplicationsService)
         {
             _loanApplicationsService = loanApplicationsService;
         }

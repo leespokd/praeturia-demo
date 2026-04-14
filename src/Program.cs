@@ -73,7 +73,7 @@ builder.Services.AddControllers()
             validationProblemDetails.Extensions["correlationId"] = correlationId;
             validationProblemDetails.Extensions["traceId"] = context.HttpContext.TraceIdentifier;
 
-            return new UnprocessableEntityObjectResult(validationProblemDetails)
+            return new BadRequestObjectResult(validationProblemDetails)
             {
                 ContentTypes = { "application/problem+json", "application/problem+xml" }
             };
